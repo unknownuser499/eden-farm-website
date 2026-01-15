@@ -19,6 +19,7 @@
     }
   </script>
 
+  <!-- Fonts & Styles -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Outfit:wght@300;400;600&display=swap');
 
@@ -42,7 +43,7 @@
       height: 2px;
       bottom: -2px;
       left: 0;
-      background-color: #ffcc33;
+      background-color: #7dd3fc;
       transition: width 0.3s ease;
     }
 
@@ -52,8 +53,8 @@
 
     .hero-gradient {
       background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80');
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80');
       background-size: cover;
       background-position: center;
     }
@@ -62,123 +63,129 @@
 
 <body class="flex flex-col min-h-screen">
 
-<!-- HEADER -->
-<header class="bg-[#4da6ff] text-white shadow-lg sticky top-0 z-50">
-  <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-    <div>
-      <h1 class="text-5xl font-bold">Eden Farm</h1>
-      <p class="text-lg text-blue-100 italic">In between Carlisle & Edinburgh</p>
-    </div>
-
-    <nav>
-      <ul class="flex space-x-6 text-2xl">
-        <li><button type="button" onclick="showPage('home')" class="nav-link">Home</button></li>
-        <li><button type="button" onclick="showPage('attractions')" class="nav-link">Attractions</button></li>
-        <li><button type="button" onclick="showPage('shop')" class="nav-link">Shop & Cafe</button></li>
-        <li><button type="button" onclick="showPage('visit')" class="nav-link">Visit</button></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main class="flex-grow">
-
-<!-- HOME -->
-<div id="page-home">
-  <section class="hero-gradient h-[520px] flex items-center justify-center text-center text-white px-4">
-    <div class="max-w-4xl">
-      <h2 class="text-7xl md:text-8xl font-bold mb-6">
-        A Beautiful Country Getaway
-      </h2>
-      <p class="text-3xl md:text-4xl mb-8">
-        Nice little stop for everyone in the family
-      </p>
-      <button type="button" onclick="showPage('visit')" class="bg-[#ffcc33] text-[#5d4037] px-10 py-4 rounded-full font-bold text-2xl hover:bg-yellow-300">
-        See Availability
-      </button>
-    </div>
-  </section>
-</div>
-
-<!-- ATTRACTIONS -->
-<div id="page-attractions" class="hidden container mx-auto px-4 py-12">
-  <h2 class="text-6xl font-bold text-[#4da6ff] mb-8">Things to See & Do</h2>
-
-  <div class="bg-white rounded-3xl p-8 shadow">
-    <h3 class="text-4xl font-bold mb-4">Pony Petting Zoo</h3>
-
-    <img
-      src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=80"
-      alt="Pony"
-      class="w-full h-64 object-cover rounded-xl mb-6"
-    />
-
-    <p class="text-2xl text-gray-700">
-      Get close to our gentle ponies and enjoy hands-on farm fun.
-    </p>
-  </div>
-</div>
-
-<!-- SHOP -->
-<div id="page-shop" class="hidden container mx-auto px-4 py-12">
-  <h2 class="text-6xl font-bold text-[#4da6ff] mb-8">Shop & Cafe</h2>
-
-  <div class="grid md:grid-cols-2 gap-8">
-    <div class="bg-white p-8 rounded-3xl shadow">
-      <h3 class="text-4xl font-bold mb-4">🌿 Local Plant Shop</h3>
-      <p>Hand-grown plants and fresh produce from the farm.</p>
-    </div>
-
-    <div class="bg-white p-8 rounded-3xl shadow">
-      <h3 class="text-4xl font-bold mb-4">☕ Hungry Pony Cafe</h3>
-      <p>Hot food, pastries and quality coffee.</p>
-    </div>
-  </div>
-</div>
-
-<!-- VISIT -->
-<div id="page-visit" class="hidden container mx-auto px-4 py-12">
-  <h2 class="text-6xl font-bold text-[#4da6ff] mb-8 text-center">Plan Your Visit</h2>
-
-  <div class="grid md:grid-cols-2 gap-12 bg-white p-10 rounded-3xl shadow-lg">
-
-    <!-- LOCATION (ORIGINAL STYLE + IMAGE) -->
-    <div>
-      <h3 class="text-4xl font-bold mb-4 text-[#5d4037]">Location</h3>
-
-      <p class="text-2xl text-gray-700 mb-6">
-        In between Carlisle & Edinburgh. Free parking for all visitors.
-      </p>
-
-      <!-- YOUR IMAGE -->
+  <!-- TOP CENTER LOGO -->
+  <div class="bg-white py-4 shadow-sm">
+    <div class="flex justify-center">
       <img
-        src="map.png"
-        alt="Rough location map"
-        class="w-full rounded-xl shadow"
-      />
+        src="eden-farm-logo.svg"
+        alt="Eden Farm Logo"
+        class="w-28 md:w-32">
     </div>
-
-    <!-- OPENING TIMES -->
-    <div>
-      <h3 class="text-4xl font-bold mb-4 text-[#5d4037]">Opening Times</h3>
-      <table class="w-full text-2xl">
-        <tr class="border-b">
-          <td class="py-3 font-semibold">Monday – Sunday</td>
-          <td class="py-3 text-right">10:00 – 16:00</td>
-        </tr>
-      </table>
-    </div>
-
   </div>
-</div>
 
-</main>
+  <!-- HEADER / NAV -->
+  <header class="bg-[#4da6ff] text-white shadow-lg sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold">Eden Farm</h1>
+        <p class="text-lg text-blue-100 italic">
+          In between Carlisle & Edinburgh
+        </p>
+      </div>
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-400 py-10 text-center">
-  <p class="text-white font-semibold">Eden Farm Visitor Attraction</p>
-  <p class="text-xs mt-2">&copy; 2025 Eden Farm</p>
-</footer>
+      <nav class="mt-4 md:mt-0">
+        <ul class="flex space-x-6 text-2xl">
+          <li><button onclick="showPage('home')" class="nav-link">Home</button></li>
+          <li><button onclick="showPage('attractions')" class="nav-link">Attractions</button></li>
+          <li><button onclick="showPage('shop')" class="nav-link">Shop & Cafe</button></li>
+          <li><button onclick="showPage('visit')" class="nav-link">Visit</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- HOME -->
+    <div id="page-home">
+      <section class="hero-gradient h-[520px] flex items-center text-white px-10">
+        <div class="max-w-5xl ml-auto text-right">
+          <h2 class="text-7xl md:text-8xl font-bold mb-6">
+            A Beautiful Country Getaway
+          </h2>
+          <p class="text-3xl md:text-4xl mb-8">
+            Nice little stop for everyone in the family
+          </p>
+
+          <button
+            onclick="showPage('visit')"
+            class="bg-sky-300 text-sky-900 px-12 py-4 rounded-full font-bold text-2xl hover:bg-sky-200 transition">
+            See Availability
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ATTRACTIONS -->
+    <div id="page-attractions" class="hidden container mx-auto px-4 py-12">
+      <h2 class="text-6xl font-bold text-[#4da6ff] mb-8">
+        Things to See & Do
+      </h2>
+
+      <div class="bg-white rounded-3xl p-8 shadow">
+        <h3 class="text-4xl font-bold mb-4">Pony Petting Zoo</h3>
+        <img
+          src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=80"
+          class="w-full h-64 object-cover rounded-xl mb-6">
+        <p class="text-2xl text-gray-700">
+          Get close to our gentle ponies and enjoy hands-on farm fun.
+        </p>
+      </div>
+    </div>
+
+    <!-- SHOP -->
+    <div id="page-shop" class="hidden container mx-auto px-4 py-12">
+      <h2 class="text-6xl font-bold text-[#4da6ff] mb-8">
+        Shop & Cafe
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow">
+          <h3 class="text-4xl font-bold mb-4">🌿 Local Plant Shop</h3>
+          <p>Hand-grown plants and fresh produce from the farm.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow">
+          <h3 class="text-4xl font-bold mb-4">☕ Hungry Pony Cafe</h3>
+          <p>Hot food, pastries and quality coffee.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISIT -->
+    <div id="page-visit" class="hidden container mx-auto px-4 py-12">
+      <h2 class="text-6xl font-bold text-[#4da6ff] mb-8 text-center">
+        Plan Your Visit
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12 bg-white p-10 rounded-3xl shadow-lg">
+        <div>
+          <h3 class="text-4xl font-bold mb-4 text-[#5d4037]">Location</h3>
+          <p class="text-2xl text-gray-700 mb-6">
+            In between Carlisle & Edinburgh. Free parking for all visitors.
+          </p>
+          <img src="map.png" class="w-full rounded-xl shadow">
+        </div>
+
+        <div>
+          <h3 class="text-4xl font-bold mb-4 text-[#5d4037]">Opening Times</h3>
+          <table class="w-full text-2xl">
+            <tr class="border-b">
+              <td class="py-3 font-semibold">Monday – Sunday</td>
+              <td class="py-3 text-right">10:00 – 16:00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10 text-center">
+    <p class="text-white font-semibold">Eden Farm Visitor Attraction</p>
+    <p class="text-xs mt-2">&copy; 2025 Eden Farm</p>
+  </footer>
 
 </body>
 </html>
